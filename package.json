@@ -3,11 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "node ./projects/server/server.js",
+    "start": "node server.js",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "extract-translations": "ngx-translate-extract --input ./src --output ./src/assets/locale/*.json --clean --sort --format namespaced-json --marker _"
+    "extract-translations": "ngx-translate-extract --input ./src --output ./src/assets/locale/*.json --clean --sort --format namespaced-json --marker _",
+    "heroku-postbuild": "ng build --prod"
   },
   "private": true,
   "dependencies": {
@@ -55,8 +56,8 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^12.0.4",
-    "@angular/cli": "~12.0.3",
-    "@angular/compiler-cli": "~12.0.3",
+    "@angular/cli": "^12.1.3",
+    "@angular/compiler-cli": "^12.0.5",
     "@biesbjerg/ngx-translate-extract": "^7.0.4",
     "@types/jasmine": "~3.6.0",
     "@types/leaflet": "^1.7.3",
